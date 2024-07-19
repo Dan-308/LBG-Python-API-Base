@@ -2,7 +2,7 @@
 # Exit script if any command fails
 set -e
 # Define Docker image name
-DOCKER_IMAGE="lbg/1.0"
+DOCKER_IMAGE="lbg"
 cleanup() {
     echo "Cleaning up previous build artifacts..."
     sleep 3
@@ -28,8 +28,7 @@ modify_app() {
 run_docker() {
     echo "Running Docker container..."
     sleep 3
-    # docker run -d -p 3000:$PORT -e PORT=$PORT $DOCKER_IMAGE
-    docker run -d -p 8080:8080 $DOCKER_IMAGE
+    docker run -d -p 8080:$PORT -e PORT=$PORT $DOCKER_IMAGE
 }
 # Main script execution
 echo "Starting build process..."

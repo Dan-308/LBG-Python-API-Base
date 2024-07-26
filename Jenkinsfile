@@ -3,7 +3,7 @@ pipeline {
     environment {
         GCR_CREDENTIALS_ID = 'jenkins-secret'
         IMAGE_NAME = 't3-image'
-        GCR_URL = 'repo-t3/lbg-mea-20'
+        GCR_URL = 'europe-west1-docker.pkg.dev/lbg-mea-20/repo-t3'
         PROJECT_ID = ' lbg-mea-20'
         CLUSTER_NAME = 't3-cluster'
         LOCATION = 'europe-west1'
